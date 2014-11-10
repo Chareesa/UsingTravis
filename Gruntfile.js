@@ -8,21 +8,11 @@ module.exports = function(grunt) {
     jshint: {
       src: ['object4Travis.js']
     },
-    jscs: {
-      all: {
-        options: {
-          'standard': 'airbnb'
-        },
-        files: {
-          src: []
-        }
-      }
-    },
     simplemocha: {
       src: ['test/test.js']
     }
   });
 
-  grunt.registerTask('test', ['jshint', 'jscs', 'simplemocha']);
+  grunt.registerTask('test', ['jshint', 'simplemocha']);
   grunt.registerTask('default', ['test']);
 };
