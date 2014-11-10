@@ -1,0 +1,16 @@
+{
+  "name": "TestingWithTravis",
+  "version": "0.0.1",
+  "description": "CountingObject",
+  "main": "counter.js",
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-simple-mocha": "^0.4.0"
+  },
+  "scripts": {
+    "test": "node_modules/grunt-cli/bin/grunt test"
+  }
+}
