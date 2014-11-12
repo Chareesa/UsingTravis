@@ -1,4 +1,5 @@
 Testing Objects and CI with Travis
+https://travis-ci.org/Chareesa/UsingTravis.svg?branch=travis
 
 Specs:
 
