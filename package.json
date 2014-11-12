@@ -1,17 +1,31 @@
 {
-  "name": "TestingWithTravis",
-  "version": "0.0.1",
-  "description": "CountingObject",
-  "main": "counter.js",
+  "name": "testingWithTravis",
+  "version": "1.0.0",
+  "description": "first app testing with travis",
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "test"
+  },
   "devDependencies": {
-    "chai": "^1.9.2",
+    "chai": "^1.10.0",
     "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13",
+    "grunt-jscs": "^0.8.1",
     "grunt-contrib-jshint": "^0.10.0",
-    "grunt-simple-mocha": "^0.4.0",
-    "grunt-contrib-jscs"
+    "grunt-cli": "^0.1.13",
+    "grunt-simple-mocha": "^0.4.0"
   },
   "scripts": {
-    "test": "node_modules/grunt-cli/bin/grunt test"
-  }
+    "test": "node_modules/grunt-cli/bin/grunt test",
+    "start": "node object4Travis.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chareesa/UsingTravis.git"
+  },
+  "author": "Chareesa Graham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chareesa/UsingTravis/issues"
+  },
+  "homepage": "https://github.com/Chareesa/UsingTravis"
 }

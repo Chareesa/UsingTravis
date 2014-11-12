@@ -1,18 +1,30 @@
 'use strict';
 
 module.exports = function(grunt) {
-  grunt.loadNpmTasks('grunt-simple-mocha');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-jscs');
+  grunt.loadNpmTasks('grunt-simple-mocha');
+  grunt.loadNpmTasks('grunt-jscs');
+
   grunt.initConfig({
     jshint: {
-      src: ['object4Travis.js']
+      options: {
+        node: true
+      },
+      src: ['./counter.js']
     },
+
     simplemocha: {
-      src: ['test/test.js']
+      src: ['test/*.js']
+    },
+
+    jscs: {
+      src: ['./counter.js'],
+      options: {
+        config: '.jscsrc'
+      }
     }
   });
 
-  grunt.registerTask('test', ['jshint', 'simplemocha']);
+  grunt.registerTask('test', ['jshint', 'simplemocha', 'jscs']);
   grunt.registerTask('default', ['test']);
 };
